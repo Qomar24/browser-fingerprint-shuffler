@@ -1,0 +1,22 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Dependency caches
+node_modules/
+npm-debug.log*
+yarn-error.log*
+pnpm-lock.yaml
+package-lock.json
+
+# Build artifacts
+dist/
+build/
+coverage/
+.parcel-cache/
+.turbo/
+
+# Env/config secrets
+.env
+.env.local
+.env.*.local
